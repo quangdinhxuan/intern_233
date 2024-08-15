@@ -1,0 +1,28 @@
+[
+ {
+  "InstFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hex_top.v",
+  "InstLine" : 19,
+  "InstName" : "hex_top",
+  "ModuleFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hex_top.v",
+  "ModuleLine" : 19,
+  "ModuleName" : "hex_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hex_top.v",
+    "InstLine" : 40,
+    "InstName" : "hc595_driver",
+    "ModuleFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hc595_driver.v",
+    "ModuleLine" : 19,
+    "ModuleName" : "hc595_driver"
+   },
+   {
+    "InstFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hex_top.v",
+    "InstLine" : 50,
+    "InstName" : "hex8",
+    "ModuleFile" : "D:/GOWIN_FPGA/LED7DOAN/src/hex8.v",
+    "ModuleLine" : 19,
+    "ModuleName" : "hex8"
+   }
+  ]
+ }
+]

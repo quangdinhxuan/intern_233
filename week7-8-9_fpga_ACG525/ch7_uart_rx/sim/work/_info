@@ -1,0 +1,82 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dH:/01_gaoyun/gao_project/06_uart_tx/uart_tx/sim
+T_opt
+!s110 1692946174
+VAhACjQ>RFX927??kk_>DI2
+04 15 4 work uart_byte_rx_tb fast 0
+=5-1ca0b877e192-64e84efe-b2-538
+o-quiet -auto_acc_if_foreign -work work -L gw5a -Lf gw5a +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vuart_byte_rx
+Z1 !s110 1692946167
+!i10b 1
+!s100 ;8BDgg^Rkk`hUzNZ@]7]^2
+IUeWDPCC8RFA`Io>ad]TZL3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dH:/01_gaoyun/gao_project/07_uart_rx/uart_rx/sim
+w1692946123
+8H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx.v
+FH:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx.v
+Z4 L0 20
+Z5 OL;L;10.7;67
+r1
+!s85 0
+31
+Z6 !s108 1692946167.000000
+!s107 H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vuart_byte_rx_tb
+R1
+!i10b 1
+!s100 H<X80AiM3Io=z?]hUFR[a2
+Ii7[PZeD_2V@J@Ghg62EOA1
+R2
+R3
+w1692943630
+8H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx_tb.v
+FH:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx_tb.v
+L0 22
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_rx_tb.v|
+!i113 0
+R7
+R0
+vuart_byte_tx
+R1
+!i10b 1
+!s100 ADi>h3e4nSLDIb2n1==V21
+I9UU:U[ER`J4fER3Zk:^RB1
+R2
+R3
+w1687763673
+8H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_tx.v
+FH:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_tx.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_tx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/07_uart_rx/uart_rx/src/uart_byte_tx.v|
+!i113 0
+R7
+R0

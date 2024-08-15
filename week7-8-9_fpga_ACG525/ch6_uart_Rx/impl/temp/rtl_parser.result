@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_tx_test.v",
+  "InstLine" : 1,
+  "InstName" : "uart_tx_test",
+  "ModuleFile" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_tx_test.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "uart_tx_test",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_tx_test.v",
+    "InstLine" : 42,
+    "InstName" : "uart_byte_tx",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_byte_tx.v",
+    "ModuleLine" : 20,
+    "ModuleName" : "uart_byte_tx"
+   }
+  ]
+ }
+]

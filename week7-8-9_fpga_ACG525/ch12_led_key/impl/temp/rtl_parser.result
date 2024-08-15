@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+  "InstLine" : 3,
+  "InstName" : "key_led_top",
+  "ModuleFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "key_led_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+    "InstLine" : 21,
+    "InstName" : "key_filter0",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_filter.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "key_filter"
+   },
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+    "InstLine" : 29,
+    "InstName" : "key_filter1",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_filter.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "key_filter"
+   },
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+    "InstLine" : 37,
+    "InstName" : "led_ctrl0",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch12_led_key/src/led_ctrl.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "led_ctrl"
+   }
+  ]
+ }
+]

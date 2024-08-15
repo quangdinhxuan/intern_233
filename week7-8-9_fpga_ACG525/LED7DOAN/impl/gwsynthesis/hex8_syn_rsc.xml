@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="hex_top" T_Register="55(0)" T_Lut="84(0)">
+    <SubModule name="hc595_driver" Register="32" Lut="35" T_Register="32(32)" T_Lut="35(35)"/>
+    <SubModule name="hex8" Register="23" Lut="49" T_Register="23(23)" T_Lut="49(49)"/>
+</Module>

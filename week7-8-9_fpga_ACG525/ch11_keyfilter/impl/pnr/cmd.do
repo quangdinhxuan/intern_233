@@ -1,0 +1,11 @@
+-d H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\gwsynthesis\key_filter.vg
+-p GW5A-25A-UBGA324-1
+-pn GW5A-LV25UG324ES
+-cfg H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23

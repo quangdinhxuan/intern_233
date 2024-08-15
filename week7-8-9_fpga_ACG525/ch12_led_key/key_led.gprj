@@ -1,0 +1,14 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5A-25A" pn="GW5A-LV25UG324ES">gw5a25a-006</Device>
+    <FileList>
+        <File path="src/key_filter.v" type="file.verilog" enable="1"/>
+        <File path="src/key_led_tb.v" type="file.verilog" enable="1"/>
+        <File path="src/key_led_top.v" type="file.verilog" enable="1"/>
+        <File path="src/led_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/key_led.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>

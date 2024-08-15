@@ -1,0 +1,29 @@
+{
+ "Device" : "GW5A-25A",
+ "Files" : [
+  {
+   "Path" : "D:/FPGA_PRATICE/ch12_led_key/src/key_filter.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_tb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/FPGA_PRATICE/ch12_led_key/src/led_ctrl.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/FPGA_PRATICE/ch12_led_key/impl/temp/rtl_parser.result",
+ "Top" : "key_led_top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

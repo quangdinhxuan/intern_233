@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dH:/01_gaoyun/gao_project/11_key_filter/key_filter/sim
+T_opt
+!s110 1698203026
+V8YD<Ia^=0I0JGzdP?5@eg2
+04 10 4 work key_led_tb fast 0
+=1-1ca0b877e192-65388591-387-ec8
+o-quiet -auto_acc_if_foreign -work work -L gw5a -Lf gw5a +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vkey_filter
+Z1 !s110 1698203022
+!i10b 1
+!s100 X:g9ZA;MZ?hzAU1?NYJPf3
+IdmX3o0ZLl4DCARiP>7;^?2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dH:/01_gaoyun/gao_project/12_key_led/key_led/sim
+w1698201104
+8H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_filter.v
+FH:/01_gaoyun/gao_project/12_key_led/key_led/src/key_filter.v
+L0 2
+Z4 OL;L;10.7;67
+r1
+!s85 0
+31
+Z5 !s108 1698203022.000000
+!s107 H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_filter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_filter.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vkey_led
+!s110 1687860501
+!i10b 1
+!s100 M1@5AIbQRFbQ`KB<d3>Ma2
+I:jLZ7Cg_?M3CCnmUU;R`G3
+R2
+R3
+w1687860389
+Z7 8H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_led.v
+Z8 FH:/01_gaoyun/gao_project/12_key_led/key_led/src/key_led.v
+L0 20
+R4
+r1
+!s85 0
+31
+!s108 1687860501.000000
+Z9 !s107 H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_led.v|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/12_key_led/key_led/src/key_led.v|
+!i113 0
+R6
+R0
+vkey_led_tb
+R1
+!i10b 1
+!s100 o9:K9<WRY6e5ORAN`ALbf2
+IF^B[IF`CYRHiMjieEGdAY2
+R2
+R3
+w1698203015
+8H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_led_tb.v
+FH:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_led_tb.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_led_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_led_tb.v|
+!i113 0
+R6
+R0
+vkey_led_top
+!s110 1698202861
+!i10b 1
+!s100 1=mf8dN2?7;XSPCbcfjU80
+IzzeQKOoJ^m`eHaLkeidT[2
+R2
+R3
+w1698201816
+R7
+R8
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1698202860.000000
+R9
+R10
+!i113 0
+R6
+R0
+vkey_led_top_tb
+!s110 1698202756
+!i10b 1
+!s100 SYVG>[Ic?Ge[DV`^iNlm50
+IEBbOfKj=4<b75KnijSRBO0
+R2
+R3
+w1440855596
+8H:/01_gaoyun/gao_project/12_key_led/key_led/src/tb/key_led_tb.v
+FH:/01_gaoyun/gao_project/12_key_led/key_led/src/tb/key_led_tb.v
+L0 5
+R4
+r1
+!s85 0
+31
+!s108 1698202756.000000
+!s107 H:/01_gaoyun/gao_project/12_key_led/key_led/src/tb/key_led_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/12_key_led/key_led/src/tb/key_led_tb.v|
+!i113 0
+R6
+R0
+vkey_model
+R1
+!i10b 1
+!s100 oiCn97MeXkT9]7kW]n>`:2
+Ih^0Uh3k8@[DXGU^KeYbne2
+R2
+R3
+w1481109230
+8H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_model.v
+FH:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_model.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_model.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:\01_gaoyun\gao_project\12_key_led\key_led\src\tb\key_model.v|
+!i113 0
+R6
+R0
+vled_ctrl
+R1
+!i10b 1
+!s100 37VcB<8`2mK>6j<N3m4W03
+I^N0T;iRg_PGiQh`KQBHAk0
+R2
+R3
+w1698201600
+8H:/01_gaoyun/gao_project/12_key_led/key_led/src/led_ctrl.v
+FH:/01_gaoyun/gao_project/12_key_led/key_led/src/led_ctrl.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 H:/01_gaoyun/gao_project/12_key_led/key_led/src/led_ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/12_key_led/key_led/src/led_ctrl.v|
+!i113 0
+R6
+R0

@@ -1,0 +1,1648 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.10 (64-bit)"
+//Tue Aug  6 10:35:59 2024
+
+//Source file index table:
+//file0 "\D:/FPGA_PRATICE/ch12_led_key/src/key_filter.v"
+//file1 "\D:/FPGA_PRATICE/ch12_led_key/src/key_led_tb.v"
+//file2 "\D:/FPGA_PRATICE/ch12_led_key/src/key_led_top.v"
+//file3 "\D:/FPGA_PRATICE/ch12_led_key/src/led_ctrl.v"
+`timescale 100 ps/100 ps
+module key_filter (
+  Clk_d,
+  key_in0_d,
+  Rst_n_d,
+  key_flag0,
+  key_state0,
+  n70_6
+)
+;
+input Clk_d;
+input key_in0_d;
+input Rst_n_d;
+output key_flag0;
+output key_state0;
+output n70_6;
+wire n148_5;
+wire en_cnt_9;
+wire n52_11;
+wire n54_15;
+wire n55_9;
+wire n57_15;
+wire n92_5;
+wire n93_5;
+wire n94_5;
+wire n95_5;
+wire n96_5;
+wire n97_5;
+wire n98_5;
+wire n99_5;
+wire n100_5;
+wire n101_5;
+wire n102_5;
+wire n104_5;
+wire n105_5;
+wire n106_5;
+wire n107_5;
+wire n108_5;
+wire n109_5;
+wire n110_5;
+wire n111_6;
+wire \state.FILTER0_8 ;
+wire \state.FILTER1_8 ;
+wire n148_6;
+wire n148_7;
+wire n148_8;
+wire en_cnt_10;
+wire en_cnt_11;
+wire n52_12;
+wire n55_10;
+wire n92_6;
+wire n92_7;
+wire n93_6;
+wire n94_6;
+wire n96_6;
+wire n99_6;
+wire n100_6;
+wire n100_7;
+wire n101_6;
+wire n106_6;
+wire n108_6;
+wire n148_9;
+wire n148_10;
+wire n92_8;
+wire n92_9;
+wire n58_22;
+wire n95_8;
+wire n103_7;
+wire n27_12;
+wire n52_15;
+wire key_in_sb;
+wire key_tmpa;
+wire key_tmpb;
+wire \state.DOWN ;
+wire cnt_full;
+wire key_in_sa;
+wire \state.IDEL ;
+wire en_cnt;
+wire \state.FILTER0 ;
+wire \state.FILTER1 ;
+wire [19:0] cnt;
+wire VCC;
+wire GND;
+  LUT4 n148_s1 (
+    .F(n148_5),
+    .I0(cnt[10]),
+    .I1(n148_6),
+    .I2(n148_7),
+    .I3(n148_8) 
+);
+defparam n148_s1.INIT=16'h4000;
+  LUT4 en_cnt_s4 (
+    .F(en_cnt_9),
+    .I0(en_cnt_10),
+    .I1(key_tmpa),
+    .I2(en_cnt_11),
+    .I3(key_tmpb) 
+);
+defparam en_cnt_s4.INIT=16'hB0A8;
+  LUT4 n52_s6 (
+    .F(n52_11),
+    .I0(\state.FILTER1 ),
+    .I1(\state.IDEL ),
+    .I2(n52_12),
+    .I3(cnt_full) 
+);
+defparam n52_s6.INIT=16'hEAC3;
+  LUT3 n54_s9 (
+    .F(n54_15),
+    .I0(key_tmpa),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ) 
+);
+defparam n54_s9.INIT=8'h40;
+  LUT4 n55_s5 (
+    .F(n55_9),
+    .I0(\state.FILTER0 ),
+    .I1(\state.DOWN ),
+    .I2(n55_10),
+    .I3(cnt_full) 
+);
+defparam n55_s5.INIT=16'hAE0F;
+  LUT3 n57_s9 (
+    .F(n57_15),
+    .I0(key_tmpb),
+    .I1(key_tmpa),
+    .I2(\state.DOWN ) 
+);
+defparam n57_s9.INIT=8'h40;
+  LUT4 n92_s1 (
+    .F(n92_5),
+    .I0(n92_6),
+    .I1(n92_7),
+    .I2(cnt[19]),
+    .I3(en_cnt) 
+);
+defparam n92_s1.INIT=16'h7800;
+  LUT4 n93_s1 (
+    .F(n93_5),
+    .I0(n92_6),
+    .I1(n93_6),
+    .I2(cnt[18]),
+    .I3(en_cnt) 
+);
+defparam n93_s1.INIT=16'h7800;
+  LUT4 n94_s1 (
+    .F(n94_5),
+    .I0(n92_6),
+    .I1(n94_6),
+    .I2(cnt[17]),
+    .I3(en_cnt) 
+);
+defparam n94_s1.INIT=16'h7800;
+  LUT4 n95_s1 (
+    .F(n95_5),
+    .I0(n92_6),
+    .I1(n95_8),
+    .I2(cnt[16]),
+    .I3(en_cnt) 
+);
+defparam n95_s1.INIT=16'h7800;
+  LUT4 n96_s1 (
+    .F(n96_5),
+    .I0(n92_6),
+    .I1(n96_6),
+    .I2(cnt[15]),
+    .I3(en_cnt) 
+);
+defparam n96_s1.INIT=16'h7800;
+  LUT4 n97_s1 (
+    .F(n97_5),
+    .I0(cnt[13]),
+    .I1(n92_6),
+    .I2(cnt[14]),
+    .I3(en_cnt) 
+);
+defparam n97_s1.INIT=16'h7800;
+  LUT3 n98_s1 (
+    .F(n98_5),
+    .I0(cnt[13]),
+    .I1(n92_6),
+    .I2(en_cnt) 
+);
+defparam n98_s1.INIT=8'h60;
+  LUT3 n99_s1 (
+    .F(n99_5),
+    .I0(n99_6),
+    .I1(cnt[12]),
+    .I2(en_cnt) 
+);
+defparam n99_s1.INIT=8'h60;
+  LUT4 n100_s1 (
+    .F(n100_5),
+    .I0(n100_6),
+    .I1(n100_7),
+    .I2(cnt[11]),
+    .I3(en_cnt) 
+);
+defparam n100_s1.INIT=16'h7800;
+  LUT4 n101_s1 (
+    .F(n101_5),
+    .I0(n101_6),
+    .I1(n100_7),
+    .I2(cnt[10]),
+    .I3(en_cnt) 
+);
+defparam n101_s1.INIT=16'h7800;
+  LUT4 n102_s1 (
+    .F(n102_5),
+    .I0(cnt[8]),
+    .I1(n100_7),
+    .I2(cnt[9]),
+    .I3(en_cnt) 
+);
+defparam n102_s1.INIT=16'h7800;
+  LUT4 n104_s1 (
+    .F(n104_5),
+    .I0(cnt[6]),
+    .I1(n148_7),
+    .I2(cnt[7]),
+    .I3(en_cnt) 
+);
+defparam n104_s1.INIT=16'h7800;
+  LUT3 n105_s1 (
+    .F(n105_5),
+    .I0(cnt[6]),
+    .I1(n148_7),
+    .I2(en_cnt) 
+);
+defparam n105_s1.INIT=8'h60;
+  LUT4 n106_s1 (
+    .F(n106_5),
+    .I0(cnt[4]),
+    .I1(n106_6),
+    .I2(cnt[5]),
+    .I3(en_cnt) 
+);
+defparam n106_s1.INIT=16'h7800;
+  LUT3 n107_s1 (
+    .F(n107_5),
+    .I0(cnt[4]),
+    .I1(n106_6),
+    .I2(en_cnt) 
+);
+defparam n107_s1.INIT=8'h60;
+  LUT3 n108_s1 (
+    .F(n108_5),
+    .I0(n108_6),
+    .I1(cnt[3]),
+    .I2(en_cnt) 
+);
+defparam n108_s1.INIT=8'h60;
+  LUT4 n109_s1 (
+    .F(n109_5),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]),
+    .I3(en_cnt) 
+);
+defparam n109_s1.INIT=16'h7800;
+  LUT3 n110_s1 (
+    .F(n110_5),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(en_cnt) 
+);
+defparam n110_s1.INIT=8'h60;
+  LUT2 n111_s2 (
+    .F(n111_6),
+    .I0(cnt[0]),
+    .I1(en_cnt) 
+);
+defparam n111_s2.INIT=4'h4;
+  LUT4 \state.FILTER0_s3  (
+    .F(\state.FILTER0_8 ),
+    .I0(\state.IDEL ),
+    .I1(cnt_full),
+    .I2(key_tmpa),
+    .I3(key_tmpb) 
+);
+defparam \state.FILTER0_s3 .INIT=16'hCEFC;
+  LUT4 \state.FILTER1_s3  (
+    .F(\state.FILTER1_8 ),
+    .I0(\state.DOWN ),
+    .I1(cnt_full),
+    .I2(key_tmpb),
+    .I3(key_tmpa) 
+);
+defparam \state.FILTER1_s3 .INIT=16'hCEFC;
+  LUT4 n148_s2 (
+    .F(n148_6),
+    .I0(cnt[11]),
+    .I1(cnt[12]),
+    .I2(cnt[13]),
+    .I3(n148_9) 
+);
+defparam n148_s2.INIT=16'h0100;
+  LUT3 n148_s3 (
+    .F(n148_7),
+    .I0(cnt[4]),
+    .I1(cnt[5]),
+    .I2(n106_6) 
+);
+defparam n148_s3.INIT=8'h80;
+  LUT4 n148_s4 (
+    .F(n148_8),
+    .I0(cnt[6]),
+    .I1(cnt[7]),
+    .I2(cnt[8]),
+    .I3(n148_10) 
+);
+defparam n148_s4.INIT=16'h0100;
+  LUT3 en_cnt_s5 (
+    .F(en_cnt_10),
+    .I0(\state.FILTER1 ),
+    .I1(cnt_full),
+    .I2(\state.IDEL ) 
+);
+defparam en_cnt_s5.INIT=8'h0D;
+  LUT3 en_cnt_s6 (
+    .F(en_cnt_11),
+    .I0(\state.FILTER0 ),
+    .I1(cnt_full),
+    .I2(\state.DOWN ) 
+);
+defparam en_cnt_s6.INIT=8'h0D;
+  LUT4 n52_s7 (
+    .F(n52_12),
+    .I0(\state.FILTER0 ),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ),
+    .I3(key_tmpa) 
+);
+defparam n52_s7.INIT=16'hFD3F;
+  LUT4 n55_s6 (
+    .F(n55_10),
+    .I0(\state.FILTER1 ),
+    .I1(\state.DOWN ),
+    .I2(key_tmpa),
+    .I3(key_tmpb) 
+);
+defparam n55_s6.INIT=16'h31F3;
+  LUT4 n92_s2 (
+    .F(n92_6),
+    .I0(n92_8),
+    .I1(n106_6),
+    .I2(n92_9),
+    .I3(n100_6) 
+);
+defparam n92_s2.INIT=16'h8000;
+  LUT3 n92_s3 (
+    .F(n92_7),
+    .I0(cnt[17]),
+    .I1(cnt[18]),
+    .I2(n94_6) 
+);
+defparam n92_s3.INIT=8'h80;
+  LUT2 n93_s2 (
+    .F(n93_6),
+    .I0(cnt[17]),
+    .I1(n94_6) 
+);
+defparam n93_s2.INIT=4'h8;
+  LUT4 n94_s2 (
+    .F(n94_6),
+    .I0(cnt[13]),
+    .I1(cnt[14]),
+    .I2(cnt[15]),
+    .I3(cnt[16]) 
+);
+defparam n94_s2.INIT=16'h8000;
+  LUT2 n96_s2 (
+    .F(n96_6),
+    .I0(cnt[13]),
+    .I1(cnt[14]) 
+);
+defparam n96_s2.INIT=4'h8;
+  LUT4 n99_s2 (
+    .F(n99_6),
+    .I0(cnt[11]),
+    .I1(n106_6),
+    .I2(n92_9),
+    .I3(n100_6) 
+);
+defparam n99_s2.INIT=16'h8000;
+  LUT3 n100_s2 (
+    .F(n100_6),
+    .I0(cnt[8]),
+    .I1(cnt[9]),
+    .I2(cnt[10]) 
+);
+defparam n100_s2.INIT=8'h80;
+  LUT2 n100_s3 (
+    .F(n100_7),
+    .I0(n106_6),
+    .I1(n92_9) 
+);
+defparam n100_s3.INIT=4'h8;
+  LUT2 n101_s2 (
+    .F(n101_6),
+    .I0(cnt[8]),
+    .I1(cnt[9]) 
+);
+defparam n101_s2.INIT=4'h8;
+  LUT4 n106_s2 (
+    .F(n106_6),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]),
+    .I3(cnt[3]) 
+);
+defparam n106_s2.INIT=16'h8000;
+  LUT3 n108_s2 (
+    .F(n108_6),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]) 
+);
+defparam n108_s2.INIT=8'h80;
+  LUT4 n148_s5 (
+    .F(n148_9),
+    .I0(cnt[15]),
+    .I1(cnt[14]),
+    .I2(cnt[16]),
+    .I3(cnt[19]) 
+);
+defparam n148_s5.INIT=16'h4000;
+  LUT3 n148_s6 (
+    .F(n148_10),
+    .I0(cnt[9]),
+    .I1(cnt[17]),
+    .I2(cnt[18]) 
+);
+defparam n148_s6.INIT=8'h80;
+  LUT2 n92_s4 (
+    .F(n92_8),
+    .I0(cnt[11]),
+    .I1(cnt[12]) 
+);
+defparam n92_s4.INIT=4'h8;
+  LUT4 n92_s5 (
+    .F(n92_9),
+    .I0(cnt[4]),
+    .I1(cnt[5]),
+    .I2(cnt[6]),
+    .I3(cnt[7]) 
+);
+defparam n92_s5.INIT=16'h8000;
+  LUT4 n58_s16 (
+    .F(n58_22),
+    .I0(key_tmpa),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ),
+    .I3(n57_15) 
+);
+defparam n58_s16.INIT=16'hFF40;
+  LUT3 n95_s3 (
+    .F(n95_8),
+    .I0(cnt[15]),
+    .I1(cnt[13]),
+    .I2(cnt[14]) 
+);
+defparam n95_s3.INIT=8'h80;
+  LUT4 n103_s2 (
+    .F(n103_7),
+    .I0(cnt[8]),
+    .I1(n106_6),
+    .I2(n92_9),
+    .I3(en_cnt) 
+);
+defparam n103_s2.INIT=16'h6A00;
+  LUT4 n27_s4 (
+    .F(n27_12),
+    .I0(key_flag0),
+    .I1(\state.IDEL ),
+    .I2(\state.DOWN ),
+    .I3(cnt_full) 
+);
+defparam n27_s4.INIT=16'h0302;
+  LUT4 n52_s9 (
+    .F(n52_15),
+    .I0(cnt_full),
+    .I1(key_state0),
+    .I2(\state.FILTER1 ),
+    .I3(\state.FILTER0 ) 
+);
+defparam n52_s9.INIT=16'hE4EC;
+  DFFCE key_in_sb_s0 (
+    .Q(key_in_sb),
+    .D(key_in_sa),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_tmpa_s0 (
+    .Q(key_tmpa),
+    .D(key_in_sb),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_tmpb_s0 (
+    .Q(key_tmpb),
+    .D(key_tmpa),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE \state.DOWN_s0  (
+    .Q(\state.DOWN ),
+    .D(n55_9),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_19_s0 (
+    .Q(cnt[19]),
+    .D(n92_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_18_s0 (
+    .Q(cnt[18]),
+    .D(n93_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_17_s0 (
+    .Q(cnt[17]),
+    .D(n94_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_16_s0 (
+    .Q(cnt[16]),
+    .D(n95_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_15_s0 (
+    .Q(cnt[15]),
+    .D(n96_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_14_s0 (
+    .Q(cnt[14]),
+    .D(n97_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_13_s0 (
+    .Q(cnt[13]),
+    .D(n98_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_12_s0 (
+    .Q(cnt[12]),
+    .D(n99_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_11_s0 (
+    .Q(cnt[11]),
+    .D(n100_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_10_s0 (
+    .Q(cnt[10]),
+    .D(n101_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_9_s0 (
+    .Q(cnt[9]),
+    .D(n102_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_8_s0 (
+    .Q(cnt[8]),
+    .D(n103_7),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_7_s0 (
+    .Q(cnt[7]),
+    .D(n104_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_6_s0 (
+    .Q(cnt[6]),
+    .D(n105_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_5_s0 (
+    .Q(cnt[5]),
+    .D(n106_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_4_s0 (
+    .Q(cnt[4]),
+    .D(n107_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_3_s0 (
+    .Q(cnt[3]),
+    .D(n108_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_2_s0 (
+    .Q(cnt[2]),
+    .D(n109_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_1_s0 (
+    .Q(cnt[1]),
+    .D(n110_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_0_s0 (
+    .Q(cnt[0]),
+    .D(n111_6),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_full_s0 (
+    .Q(cnt_full),
+    .D(n148_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_in_sa_s0 (
+    .Q(key_in_sa),
+    .D(key_in0_d),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFPE \state.IDEL_s0  (
+    .Q(\state.IDEL ),
+    .D(n52_11),
+    .CLK(Clk_d),
+    .PRESET(n70_6),
+    .CE(VCC) 
+);
+  DFFCE en_cnt_s2 (
+    .Q(en_cnt),
+    .D(n58_22),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(en_cnt_9) 
+);
+defparam en_cnt_s2.INIT=1'b0;
+  DFFCE \state.FILTER0_s1  (
+    .Q(\state.FILTER0 ),
+    .D(n54_15),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(\state.FILTER0_8 ) 
+);
+defparam \state.FILTER0_s1 .INIT=1'b0;
+  DFFCE \state.FILTER1_s1  (
+    .Q(\state.FILTER1 ),
+    .D(n57_15),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(\state.FILTER1_8 ) 
+);
+defparam \state.FILTER1_s1 .INIT=1'b0;
+  DFFCE key_flag_s5 (
+    .Q(key_flag0),
+    .D(n27_12),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+defparam key_flag_s5.INIT=1'b0;
+  DFFPE key_state_s5 (
+    .Q(key_state0),
+    .D(n52_15),
+    .CLK(Clk_d),
+    .PRESET(n70_6),
+    .CE(VCC) 
+);
+defparam key_state_s5.INIT=1'b1;
+  INV n70_s2 (
+    .O(n70_6),
+    .I(Rst_n_d) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* key_filter */
+module key_filter_0 (
+  Clk_d,
+  n70_6,
+  key_in1_d,
+  key_flag1,
+  key_state1
+)
+;
+input Clk_d;
+input n70_6;
+input key_in1_d;
+output key_flag1;
+output key_state1;
+wire n148_4;
+wire en_cnt_9;
+wire n52_11;
+wire n54_15;
+wire n55_9;
+wire n57_15;
+wire n111_6;
+wire n110_5;
+wire n109_5;
+wire n108_5;
+wire n107_5;
+wire n106_5;
+wire n105_5;
+wire n104_5;
+wire n102_5;
+wire n101_5;
+wire n100_5;
+wire n99_5;
+wire n98_5;
+wire n97_5;
+wire n96_5;
+wire n95_5;
+wire n94_5;
+wire n93_5;
+wire n92_5;
+wire \state.FILTER0_8 ;
+wire \state.FILTER1_8 ;
+wire n148_5;
+wire n148_6;
+wire n148_7;
+wire en_cnt_10;
+wire en_cnt_11;
+wire n52_12;
+wire n55_10;
+wire n108_6;
+wire n107_6;
+wire n103_6;
+wire n101_6;
+wire n99_6;
+wire n98_6;
+wire n96_6;
+wire n94_6;
+wire n93_6;
+wire n92_6;
+wire n148_8;
+wire n148_9;
+wire n103_7;
+wire n58_22;
+wire n95_8;
+wire n103_9;
+wire n27_9;
+wire n52_15;
+wire key_in_sb;
+wire key_tmpa;
+wire key_tmpb;
+wire \state.DOWN ;
+wire cnt_full;
+wire key_in_sa;
+wire \state.IDEL ;
+wire en_cnt;
+wire \state.FILTER0 ;
+wire \state.FILTER1 ;
+wire [19:0] cnt;
+wire VCC;
+wire GND;
+  LUT4 n148_s1 (
+    .F(n148_4),
+    .I0(cnt[16]),
+    .I1(n148_5),
+    .I2(n148_6),
+    .I3(n148_7) 
+);
+defparam n148_s1.INIT=16'h8000;
+  LUT4 en_cnt_s4 (
+    .F(en_cnt_9),
+    .I0(en_cnt_10),
+    .I1(key_tmpb),
+    .I2(en_cnt_11),
+    .I3(key_tmpa) 
+);
+defparam en_cnt_s4.INIT=16'hB0A8;
+  LUT4 n52_s6 (
+    .F(n52_11),
+    .I0(\state.FILTER1 ),
+    .I1(\state.IDEL ),
+    .I2(n52_12),
+    .I3(cnt_full) 
+);
+defparam n52_s6.INIT=16'hEAC3;
+  LUT3 n54_s9 (
+    .F(n54_15),
+    .I0(key_tmpa),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ) 
+);
+defparam n54_s9.INIT=8'h40;
+  LUT4 n55_s5 (
+    .F(n55_9),
+    .I0(\state.FILTER0 ),
+    .I1(\state.DOWN ),
+    .I2(n55_10),
+    .I3(cnt_full) 
+);
+defparam n55_s5.INIT=16'hAE0F;
+  LUT3 n57_s9 (
+    .F(n57_15),
+    .I0(key_tmpb),
+    .I1(key_tmpa),
+    .I2(\state.DOWN ) 
+);
+defparam n57_s9.INIT=8'h40;
+  LUT2 n111_s2 (
+    .F(n111_6),
+    .I0(cnt[0]),
+    .I1(en_cnt) 
+);
+defparam n111_s2.INIT=4'h4;
+  LUT3 n110_s1 (
+    .F(n110_5),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(en_cnt) 
+);
+defparam n110_s1.INIT=8'h60;
+  LUT4 n109_s1 (
+    .F(n109_5),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]),
+    .I3(en_cnt) 
+);
+defparam n109_s1.INIT=16'h7800;
+  LUT3 n108_s1 (
+    .F(n108_5),
+    .I0(n108_6),
+    .I1(cnt[3]),
+    .I2(en_cnt) 
+);
+defparam n108_s1.INIT=8'h60;
+  LUT3 n107_s1 (
+    .F(n107_5),
+    .I0(cnt[4]),
+    .I1(n107_6),
+    .I2(en_cnt) 
+);
+defparam n107_s1.INIT=8'h60;
+  LUT4 n106_s1 (
+    .F(n106_5),
+    .I0(cnt[4]),
+    .I1(n107_6),
+    .I2(cnt[5]),
+    .I3(en_cnt) 
+);
+defparam n106_s1.INIT=16'h7800;
+  LUT3 n105_s1 (
+    .F(n105_5),
+    .I0(cnt[6]),
+    .I1(n148_6),
+    .I2(en_cnt) 
+);
+defparam n105_s1.INIT=8'h60;
+  LUT4 n104_s1 (
+    .F(n104_5),
+    .I0(cnt[6]),
+    .I1(n148_6),
+    .I2(cnt[7]),
+    .I3(en_cnt) 
+);
+defparam n104_s1.INIT=16'h7800;
+  LUT4 n102_s1 (
+    .F(n102_5),
+    .I0(cnt[8]),
+    .I1(n103_6),
+    .I2(cnt[9]),
+    .I3(en_cnt) 
+);
+defparam n102_s1.INIT=16'h7800;
+  LUT3 n101_s1 (
+    .F(n101_5),
+    .I0(cnt[10]),
+    .I1(n101_6),
+    .I2(en_cnt) 
+);
+defparam n101_s1.INIT=8'h60;
+  LUT4 n100_s1 (
+    .F(n100_5),
+    .I0(cnt[10]),
+    .I1(n101_6),
+    .I2(cnt[11]),
+    .I3(en_cnt) 
+);
+defparam n100_s1.INIT=16'h7800;
+  LUT4 n99_s1 (
+    .F(n99_5),
+    .I0(n103_6),
+    .I1(n99_6),
+    .I2(cnt[12]),
+    .I3(en_cnt) 
+);
+defparam n99_s1.INIT=16'h7800;
+  LUT3 n98_s1 (
+    .F(n98_5),
+    .I0(cnt[13]),
+    .I1(n98_6),
+    .I2(en_cnt) 
+);
+defparam n98_s1.INIT=8'h60;
+  LUT4 n97_s1 (
+    .F(n97_5),
+    .I0(cnt[13]),
+    .I1(n98_6),
+    .I2(cnt[14]),
+    .I3(en_cnt) 
+);
+defparam n97_s1.INIT=16'h7800;
+  LUT4 n96_s1 (
+    .F(n96_5),
+    .I0(n98_6),
+    .I1(n96_6),
+    .I2(cnt[15]),
+    .I3(en_cnt) 
+);
+defparam n96_s1.INIT=16'h7800;
+  LUT4 n95_s1 (
+    .F(n95_5),
+    .I0(n98_6),
+    .I1(n95_8),
+    .I2(cnt[16]),
+    .I3(en_cnt) 
+);
+defparam n95_s1.INIT=16'h7800;
+  LUT4 n94_s1 (
+    .F(n94_5),
+    .I0(n98_6),
+    .I1(n94_6),
+    .I2(cnt[17]),
+    .I3(en_cnt) 
+);
+defparam n94_s1.INIT=16'h7800;
+  LUT4 n93_s1 (
+    .F(n93_5),
+    .I0(n98_6),
+    .I1(n93_6),
+    .I2(cnt[18]),
+    .I3(en_cnt) 
+);
+defparam n93_s1.INIT=16'h7800;
+  LUT4 n92_s1 (
+    .F(n92_5),
+    .I0(n98_6),
+    .I1(n92_6),
+    .I2(cnt[19]),
+    .I3(en_cnt) 
+);
+defparam n92_s1.INIT=16'h7800;
+  LUT4 \state.FILTER0_s3  (
+    .F(\state.FILTER0_8 ),
+    .I0(\state.IDEL ),
+    .I1(cnt_full),
+    .I2(key_tmpa),
+    .I3(key_tmpb) 
+);
+defparam \state.FILTER0_s3 .INIT=16'hCEFC;
+  LUT4 \state.FILTER1_s3  (
+    .F(\state.FILTER1_8 ),
+    .I0(\state.DOWN ),
+    .I1(cnt_full),
+    .I2(key_tmpb),
+    .I3(key_tmpa) 
+);
+defparam \state.FILTER1_s3 .INIT=16'hCEFC;
+  LUT4 n148_s2 (
+    .F(n148_5),
+    .I0(cnt[12]),
+    .I1(cnt[13]),
+    .I2(n148_8),
+    .I3(cnt[14]) 
+);
+defparam n148_s2.INIT=16'h1000;
+  LUT3 n148_s3 (
+    .F(n148_6),
+    .I0(cnt[4]),
+    .I1(cnt[5]),
+    .I2(n107_6) 
+);
+defparam n148_s3.INIT=8'h80;
+  LUT4 n148_s4 (
+    .F(n148_7),
+    .I0(cnt[6]),
+    .I1(cnt[7]),
+    .I2(cnt[8]),
+    .I3(n148_9) 
+);
+defparam n148_s4.INIT=16'h0100;
+  LUT3 en_cnt_s5 (
+    .F(en_cnt_10),
+    .I0(\state.FILTER0 ),
+    .I1(cnt_full),
+    .I2(\state.DOWN ) 
+);
+defparam en_cnt_s5.INIT=8'h0D;
+  LUT3 en_cnt_s6 (
+    .F(en_cnt_11),
+    .I0(\state.FILTER1 ),
+    .I1(cnt_full),
+    .I2(\state.IDEL ) 
+);
+defparam en_cnt_s6.INIT=8'h0D;
+  LUT4 n52_s7 (
+    .F(n52_12),
+    .I0(\state.FILTER0 ),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ),
+    .I3(key_tmpa) 
+);
+defparam n52_s7.INIT=16'hFD3F;
+  LUT4 n55_s6 (
+    .F(n55_10),
+    .I0(\state.FILTER1 ),
+    .I1(\state.DOWN ),
+    .I2(key_tmpa),
+    .I3(key_tmpb) 
+);
+defparam n55_s6.INIT=16'h31F3;
+  LUT3 n108_s2 (
+    .F(n108_6),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]) 
+);
+defparam n108_s2.INIT=8'h80;
+  LUT4 n107_s2 (
+    .F(n107_6),
+    .I0(cnt[0]),
+    .I1(cnt[1]),
+    .I2(cnt[2]),
+    .I3(cnt[3]) 
+);
+defparam n107_s2.INIT=16'h8000;
+  LUT2 n103_s2 (
+    .F(n103_6),
+    .I0(n107_6),
+    .I1(n103_7) 
+);
+defparam n103_s2.INIT=4'h8;
+  LUT4 n101_s2 (
+    .F(n101_6),
+    .I0(cnt[8]),
+    .I1(cnt[9]),
+    .I2(n107_6),
+    .I3(n103_7) 
+);
+defparam n101_s2.INIT=16'h8000;
+  LUT4 n99_s2 (
+    .F(n99_6),
+    .I0(cnt[8]),
+    .I1(cnt[9]),
+    .I2(cnt[10]),
+    .I3(cnt[11]) 
+);
+defparam n99_s2.INIT=16'h8000;
+  LUT4 n98_s2 (
+    .F(n98_6),
+    .I0(cnt[12]),
+    .I1(n107_6),
+    .I2(n103_7),
+    .I3(n99_6) 
+);
+defparam n98_s2.INIT=16'h8000;
+  LUT2 n96_s2 (
+    .F(n96_6),
+    .I0(cnt[13]),
+    .I1(cnt[14]) 
+);
+defparam n96_s2.INIT=4'h8;
+  LUT4 n94_s2 (
+    .F(n94_6),
+    .I0(cnt[13]),
+    .I1(cnt[14]),
+    .I2(cnt[15]),
+    .I3(cnt[16]) 
+);
+defparam n94_s2.INIT=16'h8000;
+  LUT2 n93_s2 (
+    .F(n93_6),
+    .I0(cnt[17]),
+    .I1(n94_6) 
+);
+defparam n93_s2.INIT=4'h8;
+  LUT3 n92_s2 (
+    .F(n92_6),
+    .I0(cnt[17]),
+    .I1(cnt[18]),
+    .I2(n94_6) 
+);
+defparam n92_s2.INIT=8'h80;
+  LUT4 n148_s5 (
+    .F(n148_8),
+    .I0(cnt[15]),
+    .I1(cnt[17]),
+    .I2(cnt[18]),
+    .I3(cnt[19]) 
+);
+defparam n148_s5.INIT=16'h4000;
+  LUT3 n148_s6 (
+    .F(n148_9),
+    .I0(cnt[10]),
+    .I1(cnt[11]),
+    .I2(cnt[9]) 
+);
+defparam n148_s6.INIT=8'h10;
+  LUT4 n103_s3 (
+    .F(n103_7),
+    .I0(cnt[4]),
+    .I1(cnt[5]),
+    .I2(cnt[6]),
+    .I3(cnt[7]) 
+);
+defparam n103_s3.INIT=16'h8000;
+  LUT4 n58_s16 (
+    .F(n58_22),
+    .I0(key_tmpa),
+    .I1(key_tmpb),
+    .I2(\state.IDEL ),
+    .I3(n57_15) 
+);
+defparam n58_s16.INIT=16'hFF40;
+  LUT3 n95_s3 (
+    .F(n95_8),
+    .I0(cnt[15]),
+    .I1(cnt[13]),
+    .I2(cnt[14]) 
+);
+defparam n95_s3.INIT=8'h80;
+  LUT4 n103_s4 (
+    .F(n103_9),
+    .I0(cnt[8]),
+    .I1(n107_6),
+    .I2(n103_7),
+    .I3(en_cnt) 
+);
+defparam n103_s4.INIT=16'h6A00;
+  LUT4 n27_s4 (
+    .F(n27_9),
+    .I0(key_flag1),
+    .I1(\state.IDEL ),
+    .I2(\state.DOWN ),
+    .I3(cnt_full) 
+);
+defparam n27_s4.INIT=16'h0302;
+  LUT4 n52_s9 (
+    .F(n52_15),
+    .I0(cnt_full),
+    .I1(key_state1),
+    .I2(\state.FILTER1 ),
+    .I3(\state.FILTER0 ) 
+);
+defparam n52_s9.INIT=16'hE4EC;
+  DFFCE key_in_sb_s0 (
+    .Q(key_in_sb),
+    .D(key_in_sa),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_tmpa_s0 (
+    .Q(key_tmpa),
+    .D(key_in_sb),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_tmpb_s0 (
+    .Q(key_tmpb),
+    .D(key_tmpa),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE \state.DOWN_s0  (
+    .Q(\state.DOWN ),
+    .D(n55_9),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_19_s0 (
+    .Q(cnt[19]),
+    .D(n92_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_18_s0 (
+    .Q(cnt[18]),
+    .D(n93_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_17_s0 (
+    .Q(cnt[17]),
+    .D(n94_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_16_s0 (
+    .Q(cnt[16]),
+    .D(n95_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_15_s0 (
+    .Q(cnt[15]),
+    .D(n96_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_14_s0 (
+    .Q(cnt[14]),
+    .D(n97_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_13_s0 (
+    .Q(cnt[13]),
+    .D(n98_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_12_s0 (
+    .Q(cnt[12]),
+    .D(n99_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_11_s0 (
+    .Q(cnt[11]),
+    .D(n100_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_10_s0 (
+    .Q(cnt[10]),
+    .D(n101_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_9_s0 (
+    .Q(cnt[9]),
+    .D(n102_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_8_s0 (
+    .Q(cnt[8]),
+    .D(n103_9),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_7_s0 (
+    .Q(cnt[7]),
+    .D(n104_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_6_s0 (
+    .Q(cnt[6]),
+    .D(n105_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_5_s0 (
+    .Q(cnt[5]),
+    .D(n106_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_4_s0 (
+    .Q(cnt[4]),
+    .D(n107_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_3_s0 (
+    .Q(cnt[3]),
+    .D(n108_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_2_s0 (
+    .Q(cnt[2]),
+    .D(n109_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_1_s0 (
+    .Q(cnt[1]),
+    .D(n110_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_0_s0 (
+    .Q(cnt[0]),
+    .D(n111_6),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE cnt_full_s0 (
+    .Q(cnt_full),
+    .D(n148_4),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFCE key_in_sa_s0 (
+    .Q(key_in_sa),
+    .D(key_in1_d),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+  DFFPE \state.IDEL_s0  (
+    .Q(\state.IDEL ),
+    .D(n52_11),
+    .CLK(Clk_d),
+    .PRESET(n70_6),
+    .CE(VCC) 
+);
+  DFFCE en_cnt_s2 (
+    .Q(en_cnt),
+    .D(n58_22),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(en_cnt_9) 
+);
+defparam en_cnt_s2.INIT=1'b0;
+  DFFCE \state.FILTER0_s1  (
+    .Q(\state.FILTER0 ),
+    .D(n54_15),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(\state.FILTER0_8 ) 
+);
+defparam \state.FILTER0_s1 .INIT=1'b0;
+  DFFCE \state.FILTER1_s1  (
+    .Q(\state.FILTER1 ),
+    .D(n57_15),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(\state.FILTER1_8 ) 
+);
+defparam \state.FILTER1_s1 .INIT=1'b0;
+  DFFCE key_flag_s5 (
+    .Q(key_flag1),
+    .D(n27_9),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(VCC) 
+);
+defparam key_flag_s5.INIT=1'b0;
+  DFFPE key_state_s5 (
+    .Q(key_state1),
+    .D(n52_15),
+    .CLK(Clk_d),
+    .PRESET(n70_6),
+    .CE(VCC) 
+);
+defparam key_state_s5.INIT=1'b1;
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* key_filter_0 */
+module led_ctrl (
+  Clk_d,
+  n70_6,
+  key_state0,
+  key_flag0,
+  key_state1,
+  key_flag1,
+  led_d
+)
+;
+input Clk_d;
+input n70_6;
+input key_state0;
+input key_flag0;
+input key_state1;
+input key_flag1;
+output [3:0] led_d;
+wire n22_4;
+wire n21_4;
+wire led_r_2_7;
+wire n21_5;
+wire n23_6;
+wire led_r_2_9;
+wire n24_5;
+wire VCC;
+wire GND;
+  LUT4 n22_s0 (
+    .F(n22_4),
+    .I0(led_d[0]),
+    .I1(led_d[1]),
+    .I2(led_d[2]),
+    .I3(led_r_2_7) 
+);
+defparam n22_s0.INIT=16'h78E1;
+  LUT2 n21_s0 (
+    .F(n21_4),
+    .I0(n21_5),
+    .I1(led_d[3]) 
+);
+defparam n21_s0.INIT=4'h9;
+  LUT2 led_r_2_s4 (
+    .F(led_r_2_7),
+    .I0(key_state0),
+    .I1(key_flag0) 
+);
+defparam led_r_2_s4.INIT=4'h4;
+  LUT4 n21_s1 (
+    .F(n21_5),
+    .I0(led_d[0]),
+    .I1(led_d[1]),
+    .I2(led_d[2]),
+    .I3(led_r_2_7) 
+);
+defparam n21_s1.INIT=16'h7FFE;
+  LUT4 n23_s1 (
+    .F(n23_6),
+    .I0(led_d[0]),
+    .I1(led_d[1]),
+    .I2(key_state0),
+    .I3(key_flag0) 
+);
+defparam n23_s1.INIT=16'h9699;
+  LUT4 led_r_2_s5 (
+    .F(led_r_2_9),
+    .I0(key_state1),
+    .I1(key_flag1),
+    .I2(key_state0),
+    .I3(key_flag0) 
+);
+defparam led_r_2_s5.INIT=16'h4F44;
+  DFFCE led_r_2_s1 (
+    .Q(led_d[2]),
+    .D(n22_4),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(led_r_2_9) 
+);
+defparam led_r_2_s1.INIT=1'b0;
+  DFFCE led_r_1_s1 (
+    .Q(led_d[1]),
+    .D(n23_6),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(led_r_2_9) 
+);
+defparam led_r_1_s1.INIT=1'b0;
+  DFFCE led_r_0_s1 (
+    .Q(led_d[0]),
+    .D(n24_5),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(led_r_2_9) 
+);
+defparam led_r_0_s1.INIT=1'b0;
+  DFFCE led_r_3_s1 (
+    .Q(led_d[3]),
+    .D(n21_4),
+    .CLK(Clk_d),
+    .CLEAR(n70_6),
+    .CE(led_r_2_9) 
+);
+defparam led_r_3_s1.INIT=1'b0;
+  INV n24_s1 (
+    .O(n24_5),
+    .I(led_d[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+endmodule /* led_ctrl */
+module key_led_top (
+  Clk,
+  Rst_n,
+  key_in0,
+  key_in1,
+  led
+)
+;
+input Clk;
+input Rst_n;
+input key_in0;
+input key_in1;
+output [3:0] led;
+wire Clk_d;
+wire Rst_n_d;
+wire key_in0_d;
+wire key_in1_d;
+wire key_flag0;
+wire key_state0;
+wire n70_6;
+wire key_flag1;
+wire key_state1;
+wire [3:0] led_d;
+wire VCC;
+wire GND;
+  IBUF Clk_ibuf (
+    .O(Clk_d),
+    .I(Clk) 
+);
+  IBUF Rst_n_ibuf (
+    .O(Rst_n_d),
+    .I(Rst_n) 
+);
+  IBUF key_in0_ibuf (
+    .O(key_in0_d),
+    .I(key_in0) 
+);
+  IBUF key_in1_ibuf (
+    .O(key_in1_d),
+    .I(key_in1) 
+);
+  OBUF led_0_obuf (
+    .O(led[0]),
+    .I(led_d[0]) 
+);
+  OBUF led_1_obuf (
+    .O(led[1]),
+    .I(led_d[1]) 
+);
+  OBUF led_2_obuf (
+    .O(led[2]),
+    .I(led_d[2]) 
+);
+  OBUF led_3_obuf (
+    .O(led[3]),
+    .I(led_d[3]) 
+);
+  key_filter key_filter0 (
+    .Clk_d(Clk_d),
+    .key_in0_d(key_in0_d),
+    .Rst_n_d(Rst_n_d),
+    .key_flag0(key_flag0),
+    .key_state0(key_state0),
+    .n70_6(n70_6)
+);
+  key_filter_0 key_filter1 (
+    .Clk_d(Clk_d),
+    .n70_6(n70_6),
+    .key_in1_d(key_in1_d),
+    .key_flag1(key_flag1),
+    .key_state1(key_state1)
+);
+  led_ctrl led_ctrl0 (
+    .Clk_d(Clk_d),
+    .n70_6(n70_6),
+    .key_state0(key_state0),
+    .key_flag0(key_flag0),
+    .key_state1(key_state1),
+    .key_flag1(key_flag1),
+    .led_d(led_d[3:0])
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* key_led_top */

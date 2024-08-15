@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "iCE40HX1K-EVB_Rev_B-rescue")(type "Legacy")(uri "${KIPRJMOD}/iCE40HX1K-EVB_Rev_B-rescue.lib")(options "")(descr ""))
+  (lib (name "New_Library_J")(type "KiCad")(uri "${KIPRJMOD}/New_Library_J.kicad_sym")(options "")(descr ""))
+)

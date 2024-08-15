@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="key_led_top" T_Register="68(0)" T_Lut="114(0)">
+    <SubModule name="key_filter0" Register="32" Lut="55" T_Register="32(32)" T_Lut="55(55)"/>
+    <SubModule name="key_filter1" Register="32" Lut="52" T_Register="32(32)" T_Lut="52(52)"/>
+    <SubModule name="led_ctrl0" Register="4" Lut="7" T_Register="4(4)" T_Lut="7(7)"/>
+</Module>

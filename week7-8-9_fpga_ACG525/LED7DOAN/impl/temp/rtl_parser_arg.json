@@ -1,0 +1,25 @@
+{
+ "Device" : "GW5A-25A",
+ "Files" : [
+  {
+   "Path" : "D:/GOWIN_FPGA/LED7DOAN/src/hc595_driver.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/GOWIN_FPGA/LED7DOAN/src/hex8.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/GOWIN_FPGA/LED7DOAN/src/hex_top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/GOWIN_FPGA/LED7DOAN/impl/temp/rtl_parser.result",
+ "Top" : "hex_top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

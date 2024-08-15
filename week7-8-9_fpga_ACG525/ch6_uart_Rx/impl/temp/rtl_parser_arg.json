@@ -1,0 +1,21 @@
+{
+ "Device" : "GW5A-25A",
+ "Files" : [
+  {
+   "Path" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_byte_tx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/FPGA_PRATICE/ch6_uart_Rx/src/uart_tx_test.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/FPGA_PRATICE/ch6_uart_Rx/impl/temp/rtl_parser.result",
+ "Top" : "uart_tx_test",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

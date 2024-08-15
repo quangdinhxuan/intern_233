@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW5A-25A" package="UBGA324" speed="1" partNumber="GW5A-LV25UG324ES"/>
+    <FileList>
+        <File path="D:\GOWIN_FPGA\LED7DOAN\src\hc595_driver.v" type="verilog"/>
+        <File path="D:\GOWIN_FPGA\LED7DOAN\src\hex8.v" type="verilog"/>
+        <File path="D:\GOWIN_FPGA\LED7DOAN\src\hex_top.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="enable_dsrm" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="D:\GOWIN_FPGA\LED7DOAN\impl\gwsynthesis\hex8.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="hex_top"/>
+        <Option type="vcc" value="0.9"/>
+        <Option type="vccx" value="3.3"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

@@ -1,0 +1,17 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.9 Beta-3
+//Part Number: GW5A-LV25UG324ES
+//Device: GW5A-25
+//Device Version: A
+//Created Time: Wed 08 23 15:47:34 2023
+
+IO_LOC "led" V12;
+IO_PORT "led" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "uart_tx" V8;
+IO_PORT "uart_tx" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC "reset_n" B16;
+IO_PORT "reset_n" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
+IO_LOC "clk" T9;
+IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;

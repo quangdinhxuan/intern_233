@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_byte_rx.v",
+  "InstLine" : 220,
+  "InstName" : "delay_buffer",
+  "ModuleFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_byte_rx.v",
+  "ModuleLine" : 220,
+  "ModuleName" : "delay_buffer"
+ },
+ {
+  "InstFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_rx_test.v",
+  "InstLine" : 1,
+  "InstName" : "uart_rx_test",
+  "ModuleFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_rx_test.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "uart_rx_test",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_rx_test.v",
+    "InstLine" : 25,
+    "InstName" : "uart_byte_tx",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_byte_tx.v",
+    "ModuleLine" : 20,
+    "ModuleName" : "uart_byte_tx"
+   },
+   {
+    "InstFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_rx_test.v",
+    "InstLine" : 37,
+    "InstName" : "uart_byte_rx",
+    "ModuleFile" : "D:/FPGA_PRATICE/ch7_uart_rx/src/uart_byte_rx.v",
+    "ModuleLine" : 20,
+    "ModuleName" : "uart_byte_rx"
+   }
+  ]
+ }
+]

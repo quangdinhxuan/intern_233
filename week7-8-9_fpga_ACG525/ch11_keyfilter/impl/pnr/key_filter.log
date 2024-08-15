@@ -1,0 +1,24 @@
+Reading netlist file: "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\gwsynthesis\key_filter.vg"
+Parsing netlist file "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\gwsynthesis\key_filter.vg" completed
+Processing netlist completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\pnr\key_filter.pin.html" completed
+Generate file "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\pnr\key_filter.rpt.html" completed
+Generate file "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\pnr\key_filter.rpt.txt" completed
+Generate file "H:\01_gaoyun\gao_project\11_key_filter\key_filter\impl\pnr\key_filter.tr.html" completed
+Wed Aug 30 14:39:11 2023
+

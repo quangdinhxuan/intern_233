@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="uart_rx_test" Register="9" Lut="1" T_Register="452(9)" T_Alu="15(0)" T_Lut="620(1)" T_Bsram="7(0)">
+    <SubModule name="gw_gao_inst_0" Register="343" Alu="15" Lut="451" Bsram="7" T_Register="343(343)" T_Alu="15(15)" T_Lut="451(451)" T_Bsram="7(7)"/>
+    <SubModule name="uart_byte_tx" Register="31" Lut="49" T_Register="31(31)" T_Lut="49(49)"/>
+    <SubModule name="uart_byte_rx" Register="69" Lut="119" T_Register="69(69)" T_Lut="119(119)"/>
+</Module>

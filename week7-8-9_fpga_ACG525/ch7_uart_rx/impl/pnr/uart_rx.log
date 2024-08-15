@@ -1,0 +1,6 @@
+Reading netlist file: "D:\FPGA_PRATICE\ch7_uart_rx\impl\gwsynthesis\uart_rx.vg"
+Parsing netlist file "D:\FPGA_PRATICE\ch7_uart_rx\impl\gwsynthesis\uart_rx.vg" completed
+Processing netlist completed
+Reading constraint file: "D:\FPGA_PRATICE\ch7_uart_rx\src\uart_rx.cst"
+Physical Constraint parsed completed
+ERROR  (TA2000) : "D:\FPGA_PRATICE\ch7_uart_rx\src\uart_rx.sdc":2 | 'syntax error' near token 'buf'

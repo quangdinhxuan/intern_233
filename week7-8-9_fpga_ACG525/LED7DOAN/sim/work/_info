@@ -1,0 +1,82 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dH:/01_gaoyun/gao_project/12_key_led/key_led/sim
+T_opt
+!s110 1687933337
+VHSAh^Cd[3ZJ5A9TAUh>Gi2
+04 7 4 work hex8_tb fast 0
+=1-1ca0b877e192-649bd198-20f-22b0
+o-quiet -auto_acc_if_foreign -work work -L gw5a -Lf gw5a +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vhc595_driver
+Z1 !s110 1687933307
+!i10b 1
+!s100 4GB693en]8RGD1Za0aU082
+I[3R0:fP@T_Nl`dYlKRl_20
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dH:/01_gaoyun/gao_project/13_hex8_hc595/hex8/sim
+w1687933066
+8H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hc595_driver.v
+FH:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hc595_driver.v
+Z4 L0 19
+Z5 OL;L;10.7;67
+r1
+!s85 0
+31
+Z6 !s108 1687933307.000000
+!s107 H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hc595_driver.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hc595_driver.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vhex8
+R1
+!i10b 1
+!s100 YhKAb4PeoUMKI]PUz4HdJ3
+IEjAQ=YMBMmofM=N05MoSS2
+R2
+R3
+w1687933299
+8H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hex8.v
+FH:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hex8.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hex8.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/hex8.v|
+!i113 0
+R7
+R0
+vhex8_tb
+R1
+!i10b 1
+!s100 knzkjzC1ZkRn`gT1XdE4H0
+I:m8>JlcMhR<?3b=>1]J3J3
+R2
+R3
+w1603251187
+8H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/tb/hex8_tb.v
+FH:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/tb/hex8_tb.v
+L0 26
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/tb/hex8_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|H:/01_gaoyun/gao_project/13_hex8_hc595/hex8/src/tb/hex8_tb.v|
+!i113 0
+R7
+R0
